@@ -1,0 +1,7 @@
+/* ============================================
+   Projects page — spacing between record groups
+============================================ */
+
+#civil, #tools, #software{padding-top:var(--space-6); padding-bottom:var(--space-3);}
+#civil{padding-top:0;}
+#tools, #software{border-top:1px solid var(--line); margin-top:var(--space-3);}

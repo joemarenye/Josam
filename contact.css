@@ -1,0 +1,30 @@
+/* ============================================
+   Contact page — grid and contact list
+============================================ */
+
+body{display:flex; flex-direction:column; min-height:100svh;}
+.sheet{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-top:var(--space-4);
+  padding-bottom:var(--space-4);
+}
+
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+.contact-grid h2{font-size:clamp(1.9rem, 1.3rem + 2.8vw, 3rem); margin-bottom:16px; max-width:12ch;}
+.contact-grid > div:first-child p{color:var(--steel); max-width:44ch; margin-bottom:22px; font-size:15px;}
+.contact-list a{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 0; border-bottom:1px solid var(--line); font-size:16px;
+  transition:color var(--dur-fast) var(--ease);
+}
+.contact-list a span:last-child{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--steel);}
+.contact-list a:hover{color:var(--accent);}
+footer.site-footer{margin-top:var(--space-3);}
+@media (max-width:820px){
+  body{display:block; min-height:0;}
+  .sheet{display:block;}
+  .contact-grid{grid-template-columns:1fr; gap:32px;}
+}
